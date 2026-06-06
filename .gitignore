@@ -1,0 +1,28 @@
+# IDE
+.idea/
+*.iml
+.settings/
+.project
+.classpath
+
+# Build
+build/
+target/
+out/
+*.class
+
+# Gradle
+.gradle/
+gradle.properties
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Plugin specific
+*.jar
+logs/

@@ -1,0 +1,21 @@
+# ───────────────────────────────────────────────
+#        ❤️ SWRewards by kapusta2039 ❤️
+# funpay: https://funpay.com/users/2600949/
+# ───────────────────────────────────────────────
+# Определите свои награды ниже.
+# Используйте & для цветовых кодов. (Справка: https://minecraft.fandom.com/wiki/Formatting_codes)
+# Используйте %player_name% для указания имени игрока.
+# ───────────────────────────────────────────────
+
+rewards:
+  diamond: # Название
+    period: "1h" # Период ("30m", "1h", "2h", "1d")
+    message: "&b| &fДержи &bалмазик &fза час игры здесь ! &b:>" # Сообщение игроку о награде
+    commands: # Команды
+      - "give %player_name% minecraft:diamond 1"
+
+  kit_start:
+    period: "24h"
+    message: "&6| &fДержи &6кит-старт &fза 24 часа игры ! &6:>"
+    commands:
+      - "kit start %player_name%"

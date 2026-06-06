@@ -1,0 +1,9 @@
+name: SWRewards
+version: 0.1
+author: kapusta2039
+website: https://github.com/kapusta2039
+main: com.kapusta2039.swrewards.SWRewards
+api-version: 1.21
+description: Плагин для вознаграждений за время в игре
+folia-supported: true
+
