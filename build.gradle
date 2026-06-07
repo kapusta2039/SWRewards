@@ -1,33 +1,37 @@
 plugins {
     id 'java'
-    id 'com.gradleup.shadow' version '8.3.6'
 }
 
 group = 'com.kapusta2039'
-version = '0.1'
+version = '0.2'
 
 repositories {
     mavenCentral()
-    maven {
-        url = 'https://repo.papermc.io/repository/maven-public/'
-    }
+    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+    maven { url = 'https://repo.extendedclip.com/releases/' }
 }
 
 dependencies {
     compileOnly 'io.papermc.paper:paper-api:1.21.3-R0.1-SNAPSHOT'
+    compileOnly 'me.clip:placeholderapi:2.11.6'
+    compileOnly 'com.h2database:h2:2.2.224'
+    compileOnly 'com.zaxxer:HikariCP:5.1.0'
+    compileOnly 'org.xerial:sqlite-jdbc:3.45.1.0'
+    compileOnly 'com.mysql:mysql-connector-j:8.3.0'
 }
 
 java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(21))
 }
 
-shadowJar {
-    archiveClassifier.set('')
-    archiveFileName.set("SWRewards-${version}.jar")
+// Подстановка ${version} в plugin.yml
+processResources {
+    filteringCharset = 'UTF-8'
+    filesMatching('plugin.yml') {
+        expand(version: project.version)
+    }
 }
 
-tasks {
-    build {
-        dependsOn(shadowJar)
-    }
+jar {
+    archiveFileName.set("SWRewards-${version}.jar")
 }
