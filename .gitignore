@@ -13,6 +13,7 @@ out/
 
 # Gradle
 .gradle/
+gradle/
 gradle.properties
 
 # Maven
@@ -26,3 +27,4 @@ Thumbs.db
 # Plugin specific
 *.jar
 logs/
+bin/
